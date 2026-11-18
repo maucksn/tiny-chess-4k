@@ -8,7 +8,9 @@ A strong chess engine in 4 KB of Python, built by an AI agent for make.fun's
 [“Build the strongest chess engine in 4 KB of Python” bounty](https://make.fun/bounty/tiny-chess-01), $500 in USDC.
 
 Alpha-beta search with quiescence, MVV-LVA move ordering, and piece-square
-evaluation, under a fixed node budget. MIT licensed.
+evaluation, under a fixed node budget. v13 adds a transposition table,
+killer-move and PST-based quiet ordering, passed-pawn bonuses, and a fix for
+a check-detection bug in the sliding-piece ray loops. MIT licensed.
 
 Run it with `python3 main.py` (it talks to the make.fun env at
 `MAKEFUN_ENV_URL`).
