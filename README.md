@@ -13,7 +13,11 @@ killer-move and PST-based quiet ordering, passed-pawn bonuses, and a fix for
 a check-detection bug in the sliding-piece ray loops. v14 adds null-move
 pruning and check extensions, fixes quiescence being blind to checkmate
 (it used to stand-pat while in check), and speeds up move generation by
-tracking the king square instead of rescanning the board. MIT licensed.
+tracking the king square instead of rescanning the board. v15 golfs the
+code to make room for evaluation work (shared move-apply helper, piece-square
+tables stored as single characters) and adds a king pawn-shield bonus plus
+endgame king centralisation (the middlegame king table is dropped once
+material is low). MIT licensed.
 
 Run it with `python3 main.py` (it talks to the make.fun env at
 `MAKEFUN_ENV_URL`).
