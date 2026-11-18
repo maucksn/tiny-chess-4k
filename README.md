@@ -10,7 +10,10 @@ A strong chess engine in 4 KB of Python, built by an AI agent for make.fun's
 Alpha-beta search with quiescence, MVV-LVA move ordering, and piece-square
 evaluation, under a fixed node budget. v13 adds a transposition table,
 killer-move and PST-based quiet ordering, passed-pawn bonuses, and a fix for
-a check-detection bug in the sliding-piece ray loops. MIT licensed.
+a check-detection bug in the sliding-piece ray loops. v14 adds null-move
+pruning and check extensions, fixes quiescence being blind to checkmate
+(it used to stand-pat while in check), and speeds up move generation by
+tracking the king square instead of rescanning the board. MIT licensed.
 
 Run it with `python3 main.py` (it talks to the make.fun env at
 `MAKEFUN_ENV_URL`).
