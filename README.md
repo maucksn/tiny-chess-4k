@@ -17,7 +17,9 @@ tracking the king square instead of rescanning the board. v15 golfs the
 code to make room for evaluation work (shared move-apply helper, piece-square
 tables stored as single characters) and adds a king pawn-shield bonus plus
 endgame king centralisation (the middlegame king table is dropped once
-material is low). MIT licensed.
+material is low). v16 drops the pawn-shield bonus (ablation showed the
+centralisation alone beats the pair) and adds a rook-on-seventh-rank bonus.
+MIT licensed.
 
 Run it with `python3 main.py` (it talks to the make.fun env at
 `MAKEFUN_ENV_URL`).
