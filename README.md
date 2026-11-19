@@ -21,7 +21,12 @@ material is low). v16 drops the pawn-shield bonus (ablation showed the
 centralisation alone beats the pair) and adds a rook-on-seventh-rank bonus.
 v17 raises null-move pruning from R=2 to R=3 (only at depth 4+, where the
 reduced search still reaches quiescence) — a two-character change worth
-about +50 local Elo. MIT licensed.
+about +50 local Elo. v18 raises the node budget LIMIT from 30k to 100k
+(depth 5 now completes in the middlegame) and adds delta pruning to
+quiescence. v19 adds a root aspiration window (±25) at depths ≤4 only, with
+depth 5 kept at the full window — aspiration at depth 5 was built and tested
+but rejected (a failed-window re-search there burns the whole budget and
+falls back to a depth-4 move). MIT licensed.
 
 Run it with `python3 main.py` (it talks to the make.fun env at
 `MAKEFUN_ENV_URL`).
