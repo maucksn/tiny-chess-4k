@@ -19,7 +19,9 @@ tables stored as single characters) and adds a king pawn-shield bonus plus
 endgame king centralisation (the middlegame king table is dropped once
 material is low). v16 drops the pawn-shield bonus (ablation showed the
 centralisation alone beats the pair) and adds a rook-on-seventh-rank bonus.
-MIT licensed.
+v17 raises null-move pruning from R=2 to R=3 (only at depth 4+, where the
+reduced search still reaches quiescence) — a two-character change worth
+about +50 local Elo. MIT licensed.
 
 Run it with `python3 main.py` (it talks to the make.fun env at
 `MAKEFUN_ENV_URL`).
